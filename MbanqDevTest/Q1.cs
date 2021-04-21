@@ -9,11 +9,15 @@ namespace MbanqDevTest
     {
         public string description = "Write an algorithm which will, with two natural numbers, switch places without using additional variables";
 
-        public void Switch2Numbers(int a, int b)
+        public static void Switch2Numbers(int a, int b)
         {
+            Console.WriteLine($"Input: a = {a}, b = {b}");
+
             a = a + b;
             b = a - b;
             a = a - b;
+
+            Console.WriteLine($"Output: a = {a}, b = {b}");
         }
 
         // Doesn't count because creates a new variable (int c)

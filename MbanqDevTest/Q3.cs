@@ -13,9 +13,12 @@ namespace MbanqDevTest
         {
             List<int> res = new List<int>() { 1, 1 };
 
-            while (res.Last() >= max)
+            while (res.Last() <= max)
             {
-                res.Add(res.TakeLast(2).Sum());
+                if (res.TakeLast(2).Sum() <= max)
+                    res.Add(res.TakeLast(2).Sum());
+                else 
+                    return res;
             }
 
             return res;
